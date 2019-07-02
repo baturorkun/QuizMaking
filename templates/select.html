@@ -1,0 +1,30 @@
+{{ define "content" }}
+
+    <style>
+        .list-group {
+            max-width: 400px;
+        }
+
+        .center-block {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            padding-top: 100px;
+        }
+    </style>
+
+    <div class="list-group center-block">
+        <a href="#" class="list-group-item list-group-item-action active">
+          Select Quiz
+        </a>
+
+        {{range .Quizes}}
+
+            <a href="/start?quiz={{.ID}}" class="list-group-item list-group-item-action">{{.Name}}</a>
+
+        {{end}}
+
+
+    </div>
+
+{{ end }}

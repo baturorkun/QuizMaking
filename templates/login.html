@@ -1,0 +1,30 @@
+{{ define "content" }}
+
+
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+
+            <!-- Icon -->
+            <div class="fadeIn first">
+                <img src="/static/quiz-logo.png" id="icon" alt="Icon" style="height: 125px; width: 125px" />
+            </div>
+
+            <!-- Login Form -->
+            <form method="post">
+                <input type="text" id="email" class="fadeIn second" name="email" placeholder="e-mail">
+                <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
+                <input type="submit" class="fadeIn fourth" value="Log In">
+            </form>
+            <form action="/register">
+             <input type="submit" class="fadeIn fourth" value="Register (New User)">
+            </form>
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+                <a class="underlineHover" href="/login">Forgot Password?</a>
+            </div>
+
+        </div>
+    </div>
+
+{{ end }}

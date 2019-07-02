@@ -1,0 +1,13 @@
+.idea/
+
+.DS_Store
+
+runtime/*
+
+vendor
+
+QuizMaking
+
+data/QuizMaker.db
+
+data/sessions/*

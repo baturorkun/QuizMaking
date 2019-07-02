@@ -1,0 +1,33 @@
+{{ define "content" }}
+
+    <style>
+        .list-group {
+            max-width: 400px;
+        }
+
+        .center-block {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            padding-top: 100px;
+        }
+    </style>
+
+    {{range .Questions}}
+
+    <div class="list-group center-block">
+        <p class="list-group-item list-group-item-action active">
+            {{.Content}}
+        </p>
+
+        {{range .Options}}
+
+            <a href="/start?quiz={{.ID}}" class="list-group-item list-group-item-action">{{.Content}}</a>
+
+        {{end}}
+
+    </div>
+
+    {{end}}
+
+{{end}}
